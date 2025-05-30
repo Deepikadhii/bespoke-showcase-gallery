@@ -1,10 +1,10 @@
-
 import { useState, useEffect } from "react";
 import { Mail, Phone, Github, Linkedin, MapPin, Download, ExternalLink, Calendar, Award, Users, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -64,9 +64,16 @@ const Index = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-              DT
-            </div>
+            <Avatar className="w-32 h-32 mx-auto mb-8">
+              <AvatarImage 
+                src="/lovable-uploads/d10f0042-09f2-48a3-b816-b78207187545.png" 
+                alt="Deepika T"
+                className="object-cover"
+              />
+              <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+                DT
+              </AvatarFallback>
+            </Avatar>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
               Deepika T
             </h1>
@@ -76,7 +83,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <Phone className="w-4 h-4" />
-                <span>9345298058</span>
+                <span>9345288058</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <Mail className="w-4 h-4" />
